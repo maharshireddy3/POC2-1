@@ -1,6 +1,9 @@
-FROM ubuntu
+FROM ubuntu:18.04
+
 RUN apt-get update
-RUN apt-get -y install apache2
-ADD . /var/www/html
-ENTRYPOINT apachectl -D FOREGROUND
-ENV name Devops Capgemini
+RUN apt-get install -y nginx 
+RUN mkdir /tmp/docker
+RUN touch /tmp/docker/test.txt
+
+EXPOSE 80
+CMD /usr/sbin/nginx -g "daemon off;"
