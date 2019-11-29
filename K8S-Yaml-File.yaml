@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-apache2
+  name: poc2
   labels:
     app: apache2
 spec:
@@ -17,7 +17,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-apache2
+  name: poc2
   labels:
     app: apache2
 spec:
@@ -31,7 +31,7 @@ spec:
         app: apache2
     spec:
       containers:
-      - name: apache2
+      - name: poc2
         image: manash081/poc2-nginx
         ports:
         - containerPort: 80
