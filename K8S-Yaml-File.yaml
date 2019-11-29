@@ -9,7 +9,7 @@ spec:
   ports:
   - port: 80
     targetPort: 80
-    nodePort: 1024
+    nodePort: 30001
     protocol: TCP
   selector:
     app: apache2
