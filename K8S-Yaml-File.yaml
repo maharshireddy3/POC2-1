@@ -32,6 +32,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: manash081/poc2-nginx
+        image: manash081/poc2-manash
         ports:
         - containerPort: 80
