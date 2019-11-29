@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: poc2
   labels:
-    app: apache2
+    app: nginx
 spec:
   type: LoadBalancer
   ports:
@@ -12,23 +12,23 @@ spec:
     nodePort: 30003
     protocol: TCP
   selector:
-    app: apache2
+    app: nginx
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: poc2
   labels:
-    app: apache2
+    app: nginx
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: apache2
+      app: nginx
   template:
     metadata:
       labels:
-        app: apache2
+        app: nginx
     spec:
       containers:
       - name: poc2
