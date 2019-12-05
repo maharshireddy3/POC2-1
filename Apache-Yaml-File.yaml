@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: 2poc2019
+  name: poc2019
   labels:
     app: apache2
 spec:
@@ -17,7 +17,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 2poc2019
+  name: poc2019
   labels:
     app: apache2
 spec:
