@@ -32,6 +32,6 @@ spec:
     spec:
       containers:
       - name: apache2
-        image: manish/poc2
+        image: manishit244/my
         ports:
         - containerPort: 80
